@@ -1,0 +1,300 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ff3e1d;
+    --text-color: #ffffff;
+    --bg-color: #111111;
+    --outline-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    z-index: 1000;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.phone-number {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.phone-number i {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    padding: 150px 0 100px;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e63517;
+}
+
+.social-links {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-links span {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.navigation-arrows {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-arrow {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-arrow:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Services Section */
+.services {
+    padding: 100px 0;
+}
+
+.service-item {
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.service-number {
+    font-size: 1.5rem;
+    opacity: 0.3;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.service-item h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 100px 0;
+}
+
+.why-choose-us h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.features {
+    margin: 50px 0;
+}
+
+.outline-text {
+    font-size: 2rem;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--outline-color);
+    margin: 20px 0;
+    transition: color 0.3s;
+}
+
+.outline-text:hover {
+    color: var(--text-color);
+}
+
+/* Hero Image Section */
+.hero-image {
+    height: 600px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .phone-number {
+        display: none;
+    }
+
+    .outline-text {
+        font-size: 1.5rem;
+    }
+
+    .service-item h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .navigation-arrows {
+        display: none;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+    }
+}
